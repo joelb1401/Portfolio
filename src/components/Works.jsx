@@ -3,7 +3,7 @@ import Tilt from "react-tilt";
 import { motion } from "framer-motion";
 
 import { styles } from "../styles";
-import { github } from "../assets";
+import { link } from "../assets";
 import { SectionWrapper } from "../hoc";
 import { projects } from "../constants";
 import { fadeIn, textVariant } from "../utils/motion";
@@ -39,7 +39,7 @@ const ProjectCard = ({
               className='black-gradient w-10 h-10 rounded-full flex justify-center items-center cursor-pointer'
             >
               <img
-                src={github}
+                src={link}
                 alt='source code'
                 className='w-1/2 h-1/2 object-contain'
               />
@@ -80,11 +80,12 @@ const Works = () => {
           variants={fadeIn("", "", 0.1, 1)}
           className='mt-3 text-secondary text-[17px] max-w-3xl leading-[30px]'
         >
-          Following projects showcases my skills and experience through
-          real-world examples of my work. Each project is briefly described with
-          links to code repositories and live demos in it. It reflects my
-          ability to solve complex problems, work with different technologies,
-          and manage projects effectively.
+          The following projects showcase my skills and deep interest in investment banking,
+          trading, and the mathematical and financial applications of programming.
+          Each project has a brief description with links to the content and live demos if
+          applicable. They reflect my ability to solve complex problems in an innovative and proactive
+          way, work with different technologies, and manage projects efficiently.
+
         </motion.p>
       </div>
 
@@ -97,4 +98,4 @@ const Works = () => {
   );
 };
 
-export default SectionWrapper(Works, "");
+export default SectionWrapper(Works, "projects");

@@ -1,28 +1,31 @@
 import {
-  mobile,
-  backend,
-  creator,
-  web,
+  excel,
+  trading,
+  ai,
+  dice,
+  tutor,
+  plate,
   javascript,
-  typescript,
   html,
   css,
-  reactjs,
-  redux,
-  tailwind,
-  nodejs,
-  mongodb,
-  git,
-  figma,
-  docker,
-  meta,
-  starbucks,
-  tesla,
-  shopify,
-  carrent,
+  jb,
+  bdo,
+  bright,
+  bath,
+  bhlive,
+  pwc,
+  mna,
   jobit,
-  tripguide,
-  threejs,
+  fxalgo,
+  monty,
+  powerpoint,
+  python,
+  R,
+  word,
+  amplify,
+  jpmorgan,
+  college,
+  springfield,
 } from "../assets";
 
 export const navLinks = [
@@ -31,31 +34,51 @@ export const navLinks = [
     title: "About",
   },
   {
+    id: "education",
+    title: "Education",
+  },
+  {
     id: "work",
     title: "Work",
   },
   {
-    id: "contact",
-    title: "Contact",
+    id: "projects",
+    title: "Projects",
+  },
+  {
+    id: "other_experience",
+    title: "Other Experience",
+  },
+  {
+    id: "tech",
+    title: "Skills",
   },
 ];
 
 const services = [
   {
-    title: "Web Developer",
-    icon: web,
+    title: "Mathematician",
+    icon: dice,
   },
   {
-    title: "React Native Developer",
-    icon: mobile,
+    title: "Financial Modelling",
+    icon: excel,
   },
   {
-    title: "Backend Developer",
-    icon: backend,
+    title: "Algorithmic Trading",
+    icon: trading,
   },
   {
-    title: "Content Creator",
-    icon: creator,
+    title: "Mathematics With AI",
+    icon: ai,
+  },
+  {
+    title: "Mathematics Tutor",
+    icon: tutor,
+  },
+  {
+    title: "Powerlifter",
+    icon: plate,
   },
 ];
 
@@ -73,166 +96,183 @@ const technologies = [
     icon: javascript,
   },
   {
-    name: "TypeScript",
-    icon: typescript,
+    name: "Python",
+    icon: python,
   },
   {
-    name: "React JS",
-    icon: reactjs,
+    name: "R",
+    icon: R,
   },
   {
-    name: "Redux Toolkit",
-    icon: redux,
+    name: "Excel",
+    icon: excel,
   },
   {
-    name: "Tailwind CSS",
-    icon: tailwind,
+    name: "Word",
+    icon: word,
   },
   {
-    name: "Node JS",
-    icon: nodejs,
-  },
-  {
-    name: "MongoDB",
-    icon: mongodb,
-  },
-  {
-    name: "Three JS",
-    icon: threejs,
-  },
-  {
-    name: "git",
-    icon: git,
-  },
-  {
-    name: "figma",
-    icon: figma,
-  },
-  {
-    name: "docker",
-    icon: docker,
+    name: "Powerpoint",
+    icon: powerpoint,
   },
 ];
 
 const experiences = [
   {
-    title: "React.js Developer",
-    company_name: "Starbucks",
-    icon: starbucks,
-    iconBg: "#383E56",
-    date: "March 2020 - April 2021",
-    points: [
-      "Developing and maintaining web applications using React.js and other related technologies.",
-      "Collaborating with cross-functional teams including designers, product managers, and other developers to create high-quality products.",
-      "Implementing responsive design and ensuring cross-browser compatibility.",
-      "Participating in code reviews and providing constructive feedback to other developers.",
-    ],
-  },
-  {
-    title: "React Native Developer",
-    company_name: "Tesla",
-    icon: tesla,
+    title: "Audit Intern",
+    company_name: "BDO",
+    icon: bdo,
     iconBg: "#E6DEDD",
-    date: "Jan 2021 - Feb 2022",
+    date: "2024",
     points: [
-      "Developing and maintaining web applications using React.js and other related technologies.",
-      "Collaborating with cross-functional teams including designers, product managers, and other developers to create high-quality products.",
-      "Implementing responsive design and ensuring cross-browser compatibility.",
-      "Participating in code reviews and providing constructive feedback to other developers.",
+      "Auditing a wide range of clients, including private equity firms.",
+      "Performing stock counts and meeting clients on client sites, developing professional relationships.",
     ],
   },
   {
-    title: "Web Developer",
-    company_name: "Shopify",
-    icon: shopify,
-    iconBg: "#383E56",
-    date: "Jan 2022 - Jan 2023",
-    points: [
-      "Developing and maintaining web applications using React.js and other related technologies.",
-      "Collaborating with cross-functional teams including designers, product managers, and other developers to create high-quality products.",
-      "Implementing responsive design and ensuring cross-browser compatibility.",
-      "Participating in code reviews and providing constructive feedback to other developers.",
-    ],
-  },
-  {
-    title: "Full stack Developer",
-    company_name: "Meta",
-    icon: meta,
+    title: "Virtual Finance & Consulting Intern",
+    company_name: "Bright Network, IEUK",
+    icon: bright,
     iconBg: "#E6DEDD",
-    date: "Jan 2023 - Present",
+    date: "June 2024",
     points: [
-      "Developing and maintaining web applications using React.js and other related technologies.",
-      "Collaborating with cross-functional teams including designers, product managers, and other developers to create high-quality products.",
-      "Implementing responsive design and ensuring cross-browser compatibility.",
-      "Participating in code reviews and providing constructive feedback to other developers.",
+      "Audited a fictitious company, successfully correcting all financial statement errors. ",
+      "Learnt and applied the concept of materiality and PESTLE analysis.",
+      "Compiled a clearance agenda for a closing meeting with the client.",
+    ],
+  },
+  {
+    title: "Lead AI Researcher - AI VIP",
+    company_name: "University of Bath",
+    icon: bath,
+    iconBg: "#E6DEDD",
+    date: "Jan 2024 - June 2024",
+    points: [
+      "Lead researcher within a team of students and academic professionals that collaborated to leverage AI for mathematical problem-solving.",
+      "Delivered weekly presentations to share research progress and innovative project strategies.",
+      "Implemented AI APIs for use in sophisticated prompt engineering.",
+    ],
+  },
+  {
+    title: "Mathematics Tutor",
+    company_name: "University of Bath",
+    icon: bath,
+    iconBg: "#E6DEDD",
+    date: "Sep 2023 - Feb 2024",
+    points: [
+      "Tutored groups of A level students, representing the teaching quality of the university.",
+      "Achieved a 20% increase in the number of questions answered correctly per session, and a 100% attendance record.",
+    ],
+  },
+  {
+    title: "Online Personal Trainer and Transformation Coach",
+    company_name: "JB Coaching",
+    icon: jb,
+    iconBg: "#383E56",
+    date: "Jan 2022 - Oct 2022",
+    points: [
+      "Simultaneously designed tailored fitness programs for a diverse range of clients, each one to fit their specific needs.",
+      "An adaptable and client-focused approach led to a minimum of a 10% decrease in body fat per client.",
+      "Utilised excel to perform multiple data analyses on progress to model and extrapolate future client goals.",
+    ],
+  },
+  {
+    title: "Personal Trainer and Wall Climbing Instructor",
+    company_name: "BH Live Active",
+    icon: bhlive,
+    iconBg: "#E6DEDD",
+    date: "June 2021 - Oct 2022",
+    points: [
+      "Juggled two roles within the same company, facilitating the upkeep of both the wall climbing facility and the gym.",
+      "Taught customers how to use both facilities, while ensuring correct and safe practise.",
+    ],
+  },
+  {
+    title: "Spring Intern",
+    company_name: "PWC",
+    icon: pwc,
+    iconBg: "#E6DEDD",
+    date: "April 2021",
+    points: [
+      "Shadowed roles in audit, technology and operations.",
+      "Completed a consultancy project to find and test solutions for reducing carbon emissions and decreasing tax while maintaining product quality.",
+      "Acquired strategies to manage stress and navigate challenges like impostor syndrome with confidence.",
     ],
   },
 ];
 
-const testimonials = [
+const education = [
   {
-    testimonial:
-      "I thought it was impossible to make a website as beautiful as our product, but Rick proved me wrong.",
-    name: "Sara Lee",
-    designation: "CFO",
-    company: "Acme Co",
-    image: "https://randomuser.me/api/portraits/women/4.jpg",
+    school: "University of Bath",
+    course: "BSc (hons) Mathematics",
+    grades: "85% (First)",
+    icon: bath,
+    iconBg: "#E6DEDD",
+    date: "2022-Present",
+    points: [
+      "Year 1: Probability & Statistics (95%), Vector Calculus (97%), Python Coursework (89%).",
+      "Probability 2A (100%), Probability 2B (97%), ODEs & Control (95%), Numerical Analysis Python Coursework (94%). Top of year in all 4.",
+    ],
   },
   {
-    testimonial:
-      "I've never met a web developer who truly cares about their clients' success like Rick does.",
-    name: "Chris Brown",
-    designation: "COO",
-    company: "DEF Corp",
-    image: "https://randomuser.me/api/portraits/men/5.jpg",
+    school: "City of Portsmouth College",
+    course: "Maths, Further Maths, Physics",
+    grades: "A*A*A*",
+    icon: college,
+    iconBg: "#E6DEDD",
+    date: "2020 - 2022",
+    points: [
+    ],
   },
   {
-    testimonial:
-      "After Rick optimized our website, our traffic increased by 50%. We can't thank them enough!",
-    name: "Lisa Wang",
-    designation: "CTO",
-    company: "456 Enterprises",
-    image: "https://randomuser.me/api/portraits/women/6.jpg",
+    school: "Springfield School",
+    grades: "99999999977 and L3 Excel Methods",
+    icon: springfield,
+    iconBg: "#E6DEDD",
+    date: "2015 - 2020",
+    points: [
+      "9 in Maths, Further Maths and English Language."
+    ],
   },
 ];
 
 const projects = [
   {
-    name: "Car Rent",
+    name: "M&A Student Handbook",
     description:
-      "Web-based platform that allows users to search, book, and manage car rentals from various providers, providing a convenient and efficient solution for transportation needs.",
+      "I found that the content involved with M&A investment banking was simple, but explained poorly and in an unstructured way online. I did what any normal person would do in this situation, and write a book! This book gives a brief but holistic and comprehensive overview of M&A, in a way that is understandable and structured for someone with limited background knowledge.",
     tags: [
       {
-        name: "react",
+        name: "M&A",
         color: "blue-text-gradient",
       },
       {
-        name: "mongodb",
+        name: "DCF Analysis",
         color: "green-text-gradient",
       },
       {
-        name: "tailwind",
+        name: "Financial Statements",
         color: "pink-text-gradient",
       },
     ],
-    image: carrent,
+    image: mna,
     source_code_link: "https://github.com/",
   },
   {
-    name: "Job IT",
+    name: "Options Pricer",
     description:
-      "Web application that enables users to search for job openings, view estimated salary ranges for positions, and locate available jobs based on their current location.",
+      "Machine learning implementation in Python using a Random Forest model to price QQQ (Invesco QQQ Trust) options. Also included is the document of the steps I took to create this and what I learnt.",
     tags: [
       {
-        name: "react",
+        name: "Python",
         color: "blue-text-gradient",
       },
       {
-        name: "restapi",
+        name: "Machine Learning",
         color: "green-text-gradient",
       },
       {
-        name: "scss",
+        name: "Options",
         color: "pink-text-gradient",
       },
     ],
@@ -240,26 +280,96 @@ const projects = [
     source_code_link: "https://github.com/",
   },
   {
-    name: "Trip Guide",
+    name: "FOREX Trading Algorithm",
     description:
-      "A comprehensive travel booking platform that allows users to book flights, hotels, and rental cars, and offers curated recommendations for popular destinations.",
+      "A FOREX trading algorithm and its backtester that trades XAUUSD on the 5min TF according to a fine-tuned strategy with proper risk management. This is the result of over 10 different versions and strategy adjustments. It achieved a 6% return in one month.",
     tags: [
       {
-        name: "nextjs",
+        name: "FOREX",
         color: "blue-text-gradient",
       },
       {
-        name: "supabase",
+        name: "Risk Management",
         color: "green-text-gradient",
       },
       {
-        name: "css",
+        name: "Python",
         color: "pink-text-gradient",
       },
     ],
-    image: tripguide,
+    image: fxalgo,
+    source_code_link: "https://github.com/",
+  },
+  {
+    name: "Monty Hall Website Entrance",
+    description:
+      "While wanting to create this portfolio website to improve and showcase my programming skills, I also wanted to personalise it by creating a 'gateway' that only allowed access if the user understands one of my favourite probability questions - the Monty Hall problem! Well done for getting this far. (By the way, the game was rigged to promote correct reasoning rather than luck).",
+    tags: [
+      {
+        name: "Probability",
+        color: "blue-text-gradient",
+      },
+      {
+        name: "CSS",
+        color: "green-text-gradient",
+      },
+      {
+        name: "HTML",
+        color: "pink-text-gradient",
+      },
+      {
+        name: "JavaScript",
+        color: "orange-text-gradient",
+      },
+    ],
+    image: monty,
     source_code_link: "https://github.com/",
   },
 ];
 
-export { services, technologies, experiences, testimonials, projects };
+const other_experience = [
+  {
+    name: "AmplifyME M&A Finance Accelerator Simulation",
+    description:
+      "Before knowing much about investment banking or M&A, I completed this simulation and achieved a 96% score. It required successful completion of an entire DCF analysis with a recommendation in under 2 hours.",
+    tags: [
+      {
+        name: "M&A",
+        color: "blue-text-gradient",
+      },
+      {
+        name: "DCF Analysis",
+        color: "green-text-gradient",
+      },
+      {
+        name: "Financial Statements",
+        color: "pink-text-gradient",
+      },
+    ],
+    image: amplify,
+    source_code_link: "https://github.com/",
+  },
+  {
+    name: "JP Morgan Chase Investment Banking Job Simulation - Forage",
+    description:
+      "This simulation introduced me to DCF analysis, target company research and identification, and the auction process. After completing the DCF model, I crafted a concise 2-pager to inform a client's decision-making.",
+    tags: [
+      {
+        name: "M&A",
+        color: "blue-text-gradient",
+      },
+      {
+        name: "DCF Analysis",
+        color: "green-text-gradient",
+      },
+      {
+        name: "Due Diligence",
+        color: "pink-text-gradient",
+      },
+    ],
+    image: jpmorgan,
+    source_code_link: "https://github.com/",
+  },
+];
+
+export { services, technologies, experiences, education, projects, other_experience };

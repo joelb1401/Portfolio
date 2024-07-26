@@ -5,10 +5,10 @@ import { motion } from "framer-motion";
 import { styles } from "../styles";
 import { link } from "../assets";
 import { SectionWrapper } from "../hoc";
-import { projects } from "../constants";
+import { other_experience } from "../constants";
 import { fadeIn, textVariant } from "../utils/motion";
 
-const ProjectCard = ({
+const ExperienceCard = ({
   index,
   name,
   description,
@@ -29,7 +29,7 @@ const ProjectCard = ({
         <div className='relative w-full h-[230px]'>
           <img
             src={image}
-            alt='project_image'
+            alt='experience_image'
             className='w-full h-full object-cover rounded-2xl'
           />
 
@@ -67,12 +67,11 @@ const ProjectCard = ({
   );
 };
 
-const Works = () => {
+const Other_Experience = () => {
   return (
     <>
       <motion.div variants={textVariant()}>
-        <p className={`${styles.sectionSubText} `}>My work</p>
-        <h2 className={`${styles.sectionHeadText}`}>Projects.</h2>
+        <h2 className={`${styles.sectionHeadText}`}>Other Experience.</h2>
       </motion.div>
 
       <div className='w-full flex'>
@@ -80,22 +79,19 @@ const Works = () => {
           variants={fadeIn("", "", 0.1, 1)}
           className='mt-3 text-secondary text-[17px] max-w-3xl leading-[30px]'
         >
-          The following projects showcase my skills and deep interest in investment banking,
-          trading, and the mathematical and financial applications of programming.
-          Each project has a brief description with links to the content and live demos if
-          applicable. They reflect my ability to solve complex problems in an innovative and proactive
-          way, work with different technologies, and manage projects efficiently.
+          The following activities I have completed emphasise my passion for investment banking
+          and trading and prove my ability to complete relevant tasks to a high standard.
 
         </motion.p>
       </div>
 
       <div className='mt-20 flex flex-wrap gap-7'>
-        {projects.map((project, index) => (
-          <ProjectCard key={`project-${index}`} index={index} {...project} />
+        {other_experience.map((experience, index) => (
+          <ExperienceCard key={`experience-${index}`} index={index} {...experience} />
         ))}
       </div>
     </>
   );
 };
 
-export default SectionWrapper(Works, "projects");
+export default SectionWrapper(Other_Experience, "other_experience");

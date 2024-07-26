@@ -1,27 +1,18 @@
-import { BrowserRouter } from "react-router-dom";
-
-import { About, Contact, Experience, Feedbacks, Hero, Navbar, Tech, Works, StarsCanvas } from "./components";
+import React from "react";
+import { BrowserRouter, Routes, Route, Navigate } from "react-router-dom";
+import Game from "./components/Game";
+import Portfolio from "./components/Portfolio";
 
 const App = () => {
   return (
     <BrowserRouter>
-      <div className='relative z-0 bg-primary'>
-        <div className='bg-hero-pattern bg-cover bg-no-repeat bg-center'>
-          <Navbar />
-          <Hero />
-        </div>
-        <About />
-        <Experience />
-        <Tech />
-        <Works />
-        <Feedbacks />
-        <div className='relative z-0'>
-          <Contact />
-          <StarsCanvas />
-        </div>
-      </div>
+      <Routes>
+        <Route path="/" element={<Game />} />
+        <Route path="/portfolio" element={<Portfolio />} />
+        <Route path="*" element={<Navigate to="/" replace />} />
+      </Routes>
     </BrowserRouter>
   );
-}
+};
 
 export default App;
