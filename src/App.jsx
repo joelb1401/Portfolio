@@ -1,28 +1,25 @@
-import React, { useEffect } from "react";
-import { HashRouter, Routes, Route, Navigate, useNavigate } from "react-router-dom";
-import Navbar from "./components/Navbar";
+import React, { useEffect, useState } from "react";
+import { HashRouter, Routes, Route, Navigate } from "react-router-dom";
+import Navbar from "./components/Navbar";  // Make sure to import Navbar
 import Game from "./components/Game";
 import Portfolio from "./components/Portfolio";
 
-const RedirectIfCompleted = () => {
-  const navigate = useNavigate();
+const App = () => {
+  const [gameCompleted, setGameCompleted] = useState(false);
 
   useEffect(() => {
     const completed = localStorage.getItem('montyHallCompleted') === 'true';
-    if (completed) {
-      navigate('/portfolio');
-    }
-  }, [navigate]);
+    setGameCompleted(completed);
+  }, []);
 
-  return <Game />;
-};
-
-const App = () => {
   return (
     <HashRouter>
-      <Navbar />
+      <Navbar />  {/* Add this line to include Navbar in all pages */}
       <Routes>
-        <Route path="/" element={<RedirectIfCompleted />} />
+        <Route
+          path="/"
+          element={gameCompleted ? <Navigate to="/portfolio" replace /> : <Game />}
+        />
         <Route path="/portfolio" element={<Portfolio />} />
         <Route path="*" element={<Navigate to="/" replace />} />
       </Routes>
