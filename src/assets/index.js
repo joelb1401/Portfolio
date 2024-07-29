@@ -27,6 +27,7 @@ import mna from "./mna.png";
 import link from "./link.png";
 import jobit from "./jobit.png";
 import fxalgo from "./fxalgo.png";
+import option from "./option.png";
 import monty from "./monty.png";
 
 import amplify from "./amplify.png";
@@ -58,6 +59,7 @@ export {
   link,
   jobit,
   fxalgo,
+  option,
   monty,
   powerpoint,
   python,

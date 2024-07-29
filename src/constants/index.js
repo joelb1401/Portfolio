@@ -17,6 +17,7 @@ import {
   mna,
   jobit,
   fxalgo,
+  option,
   monty,
   powerpoint,
   python,
@@ -276,7 +277,7 @@ const projects = [
         color: "pink-text-gradient",
       },
     ],
-    image: jobit,
+    image: option,
     source_code_link: "https://github.com/",
   },
   {
@@ -328,6 +329,27 @@ const projects = [
 ];
 
 const other_experience = [
+  {
+    name: "JP Morgan Chase Quantitative Research Job Simulation - Forage",
+    description:
+      "This simulation focused on quantitative research  and machine learning methods to analyse a book of loans and estimate a customer's probability of default. I also used dynamic programming to convert FICO scores into categorical data to predict defaults. I have included the code I produced as well as the documentation of the steps I took.",
+    tags: [
+      {
+        name: "Quantitative Research",
+        color: "blue-text-gradient",
+      },
+      {
+        name: "Machine Learning",
+        color: "green-text-gradient",
+      },
+      {
+        name: "Default Prediction",
+        color: "pink-text-gradient",
+      },
+    ],
+    image: jpmorgan,
+    source_code_link: "https://github.com/",
+  },
   {
     name: "AmplifyME M&A Finance Accelerator Simulation",
     description:
