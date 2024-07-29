@@ -68,14 +68,17 @@ function Game() {
     setShowReasonContainer(false);
     if (correct) {
       setMessage('Correct reasoning! You win!');
-      localStorage.setItem('montyHallCompleted', 'true');
-      // Redirect to portfolio after a short delay
-      setTimeout(() => navigate('/portfolio'), 2000);
+      setShowPortfolioButton(true);
     } else {
       setMessage('Incorrect reasoning. The game will restart.');
       setTimeout(() => window.location.reload(), 3000);
     }
-  }, [navigate]);
+  }, []);
+
+  // Navigate to portfolio page
+  const handleViewPortfolio = () => {
+    navigate('/portfolio');
+  };
 
   // Initialize game message on component mount
   useEffect(() => {
@@ -159,6 +162,12 @@ function Game() {
               <button onClick={() => checkReasoning(true)}>
                 It's now more likely that the other door has the prize.
               </button>
+            </div>
+          )}
+
+          {showPortfolioButton && (
+            <div id="portfolio-button-container">
+              <button onClick={handleViewPortfolio}>View My Portfolio</button>
             </div>
           )}
         </div>
