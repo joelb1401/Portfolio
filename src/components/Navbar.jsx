@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from "react";
-import { Link } from "react-router-dom";
+import { Link, useLocation } from "react-router-dom";
 
 import { styles } from "../styles";
 import { navLinks } from "../constants";
@@ -9,6 +9,7 @@ const Navbar = () => {
   const [active, setActive] = useState("");
   const [toggle, setToggle] = useState(false);
   const [scrolled, setScrolled] = useState(false);
+  const location = useLocation();
 
   useEffect(() => {
     const handleScroll = () => {
@@ -25,6 +26,10 @@ const Navbar = () => {
     return () => window.removeEventListener("scroll", handleScroll);
   }, []);
 
+  const resetGame = () => {
+    localStorage.removeItem('montyHallCompleted');
+  };
+
   return (
     <nav
       className={`${
@@ -40,6 +45,7 @@ const Navbar = () => {
           onClick={() => {
             setActive("");
             window.scrollTo(0, 0);
+            resetGame();
           }}
         >
           <img src={logo} alt='logo' className='w-9 h-9 object-contain' />
@@ -57,9 +63,21 @@ const Navbar = () => {
               } hover:text-white text-[18px] font-medium cursor-pointer`}
               onClick={() => setActive(nav.title)}
             >
-              <a href={`#${nav.id}`}>{nav.title}</a>
+              {location.pathname === '/portfolio' ? (
+                <a href={`#${nav.id}`}>{nav.title}</a>
+              ) : (
+                <Link to="/portfolio">{nav.title}</Link>
+              )}
             </li>
           ))}
+          {location.pathname === '/portfolio' && (
+            <li
+              className="text-secondary hover:text-white text-[18px] font-medium cursor-pointer"
+              onClick={resetGame}
+            >
+              <Link to="/">Play Game</Link>
+            </li>
+          )}
         </ul>
 
         <div className='sm:hidden flex flex-1 justify-end items-center'>
@@ -87,9 +105,24 @@ const Navbar = () => {
                     setActive(nav.title);
                   }}
                 >
-                  <a href={`#${nav.id}`}>{nav.title}</a>
+                  {location.pathname === '/portfolio' ? (
+                    <a href={`#${nav.id}`}>{nav.title}</a>
+                  ) : (
+                    <Link to="/portfolio">{nav.title}</Link>
+                  )}
                 </li>
               ))}
+              {location.pathname === '/portfolio' && (
+                <li
+                  className="font-poppins font-medium cursor-pointer text-[16px] text-secondary"
+                  onClick={() => {
+                    setToggle(!toggle);
+                    resetGame();
+                  }}
+                >
+                  <Link to="/">Play Game</Link>
+                </li>
+              )}
             </ul>
           </div>
         </div>
