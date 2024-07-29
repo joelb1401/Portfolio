@@ -77,7 +77,7 @@ function Game() {
 
   // Navigate to portfolio page
   const handleViewPortfolio = () => {
-    navigate('/Portfolio/');
+    navigate('/Portfolio/portfolio');
   };
 
   // Initialize game message on component mount
