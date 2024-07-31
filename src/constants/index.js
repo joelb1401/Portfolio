@@ -266,7 +266,7 @@ const projects = [
       },
     ],
     image: mna,
-    source_code_link: "/MA_Student_Handbook.pdf",
+    source_code_link: "https://github.com/joelb1401/MAhb",
   },
   {
     name: "Options Pricer",
@@ -378,7 +378,7 @@ const other_experience = [
       },
     ],
     image: amplify,
-    source_code_link: "/AMdcf.xlsx",
+    source_code_link: "https://github.com/joelb1401/AMdcf",
   },
   {
     name: "JP Morgan Chase Investment Banking Job Simulation - Forage",
@@ -399,7 +399,7 @@ const other_experience = [
       },
     ],
     image: jpmorgan,
-    source_code_link: "/JPMibsimcert.pdf",
+    source_code_link: "https://github.com/joelb1401/JPMibsim",
   },
 ];
 
