@@ -7,6 +7,8 @@ import excel from "./excel.png";
 import dice from "./dice.png";
 import menu from "./menu.svg";
 import close from "./close.svg";
+import golf from "./golf.png";
+import football from "./football.png";
 
 import css from "./tech/css.png";
 import html from "./tech/html.png";
@@ -69,4 +71,6 @@ export {
   jpmorgan,
   college,
   springfield,
+  golf,
+  football,
 };

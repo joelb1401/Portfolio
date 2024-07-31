@@ -15,7 +15,6 @@ import {
   bhlive,
   pwc,
   mna,
-  jobit,
   fxalgo,
   option,
   monty,
@@ -27,6 +26,8 @@ import {
   jpmorgan,
   college,
   springfield,
+  golf,
+  football,
 } from "../assets";
 
 export const navLinks = [
@@ -80,6 +81,14 @@ const services = [
   {
     title: "Powerlifter",
     icon: plate,
+  },
+  {
+    title: "Golf",
+    icon: golf,
+  },
+  {
+    title: "Football",
+    icon: football,
   },
 ];
 
@@ -212,7 +221,7 @@ const education = [
     date: "2022-Present",
     points: [
       "Year 1: Probability & Statistics (95%), Vector Calculus (97%), Python Coursework (89%).",
-      "Probability 2A (100%), Probability 2B (97%), ODEs & Control (95%), Numerical Analysis Python Coursework (94%). Top of year in all 4.",
+      "Year 2: Probability 2A (100%), Probability 2B (97%), ODEs & Control (95%), Numerical Analysis Python Coursework (94%). Top of year in all 4.",
     ],
   },
   {
@@ -257,7 +266,7 @@ const projects = [
       },
     ],
     image: mna,
-    source_code_link: "https://github.com/",
+    source_code_link: "/MA_Student_Handbook.pdf",
   },
   {
     name: "Options Pricer",
@@ -278,7 +287,7 @@ const projects = [
       },
     ],
     image: option,
-    source_code_link: "https://github.com/",
+    source_code_link: "https://github.com/joelb1401/Options-Pricer",
   },
   {
     name: "FOREX Trading Algorithm",
@@ -299,7 +308,7 @@ const projects = [
       },
     ],
     image: fxalgo,
-    source_code_link: "https://github.com/",
+    source_code_link: "https://github.com/joelb1401/FXalgo",
   },
   {
     name: "Monty Hall Website Entrance",
@@ -348,12 +357,12 @@ const other_experience = [
       },
     ],
     image: jpmorgan,
-    source_code_link: "https://github.com/",
+    source_code_link: "https://github.com/joelb1401/JPMquantsim",
   },
   {
     name: "AmplifyME M&A Finance Accelerator Simulation",
     description:
-      "Before knowing much about investment banking or M&A, I completed this simulation and achieved a 96% score. It required successful completion of an entire DCF analysis with a recommendation in under 2 hours.",
+      "Before knowing much about investment banking or M&A, I completed this simulation and achieved a 96% score. It required successful completion of an entire DCF analysis with a recommendation in under 45 minutes.",
     tags: [
       {
         name: "M&A",
@@ -369,7 +378,7 @@ const other_experience = [
       },
     ],
     image: amplify,
-    source_code_link: "https://github.com/",
+    source_code_link: "/AMdcf.xlsx",
   },
   {
     name: "JP Morgan Chase Investment Banking Job Simulation - Forage",
@@ -390,7 +399,7 @@ const other_experience = [
       },
     ],
     image: jpmorgan,
-    source_code_link: "https://github.com/",
+    source_code_link: "/JPMibsimcert.pdf",
   },
 ];
 

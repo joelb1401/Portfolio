@@ -10,7 +10,6 @@ import hostImage from '../assets/host.png';
 
 function Game() {
   const navigate = useNavigate();
-  // Game state variables
   const [selectedDoor, setSelectedDoor] = useState(null);
   const [openedDoor, setOpenedDoor] = useState(null);
   const [prizeDoor, setPrizeDoor] = useState(null);
@@ -19,7 +18,6 @@ function Game() {
   const [showReasonContainer, setShowReasonContainer] = useState(false);
   const [showPortfolioButton, setShowPortfolioButton] = useState(false);
 
-  // Update game message based on current stage
   const updateGameMessage = useCallback((stage, doorNumber = null, openedDoorNumber = null, selectedDoorNumber = null) => {
     const messages = {
       initial: "Choose a door to start.",
@@ -30,13 +28,11 @@ function Game() {
     setMessage(messages[stage] || "");
   }, []);
 
-  // Handle door selection
   const selectDoor = useCallback((doorNumber) => {
     if (selectedDoor !== null) return;
     setSelectedDoor(doorNumber);
     updateGameMessage('doorSelected', doorNumber);
 
-    // Reveal a goat door after a short delay
     setTimeout(() => {
       const goatDoors = [1, 2, 3].filter(d => d !== doorNumber);
       const newOpenedDoor = goatDoors[Math.floor(Math.random() * goatDoors.length)];
@@ -46,14 +42,12 @@ function Game() {
     }, 3000);
   }, [selectedDoor, updateGameMessage]);
 
-  // Handle player's decision to switch or keep their door
   const makeChoice = useCallback((switched) => {
     setShowSwitchKeepButtons(false);
 
     if (switched) {
       const newSelectedDoor = [1, 2, 3].find(d => d !== selectedDoor && d !== openedDoor);
       setSelectedDoor(newSelectedDoor);
-      // Set the prize door to be the newly selected door
       setPrizeDoor(newSelectedDoor);
       setMessage('Why did you switch?');
       setShowReasonContainer(true);
@@ -63,7 +57,6 @@ function Game() {
     }
   }, [selectedDoor, openedDoor]);
 
-  // Check player's reasoning for switching
   const checkReasoning = useCallback((correct) => {
     setShowReasonContainer(false);
     if (correct) {
@@ -75,17 +68,14 @@ function Game() {
     }
   }, []);
 
-  // Navigate to portfolio page
   const handleViewPortfolio = () => {
     navigate('/Portfolio/portfolio');
   };
 
-  // Initialize game message on component mount
   useEffect(() => {
     updateGameMessage('initial');
   }, [updateGameMessage]);
 
-  // Determine content behind each door
   const getDoorContent = (doorNumber) => {
     if (openedDoor === doorNumber) {
       return { image: goatImage, alt: "Goat", className: "goat", background: fieldBackground };
@@ -120,7 +110,6 @@ function Game() {
                     transform: selectedDoor === doorNumber && !showPortfolioButton ? 'scale(1.05)' : '',
                   }}
                 >
-                  {/* Door faces */}
                   {['front', 'back', 'top', 'bottom', 'left', 'right'].map(face => (
                     <div key={face} className={`door-face door-${face}`} style={face === 'front' || face === 'back' ? {backgroundImage: `url(${doorImage})`} : {}}></div>
                   ))}
