@@ -37,15 +37,16 @@ const ServiceCard = ({ index, title, icon }) => (
 
 const About = () => {
   return (
-      <>
-          <motion.div variants={textVariant()}>
-              <p className={styles.sectionSubText}>Introduction</p>
-              <h2 className={styles.sectionHeadText}>Overview.</h2>
-          </motion.div>
+    <>
+      <motion.div variants={textVariant()}>
+          <p className={styles.sectionSubText}>Introduction</p>
+          <h2 className={styles.sectionHeadText}>Overview.</h2>
+      </motion.div>
 
+      <div className='w-full flex'>
           <motion.p
               variants={fadeIn("", "", 0.1, 1)}
-              className='mt-4 text-secondary text-[17px] max-w-3xl leading-[30px]'
+              className='mt-3 text-secondary text-[17px] max-w-3xl leading-[30px]'
           >
               I'm a skilled mathematician with a particular interest in probability and its
               financial implications. I have some of the top grades in my cohort with an 85%
@@ -54,13 +55,14 @@ const About = () => {
               about putting my skills and work ethic to good use in the finance industry,
               with the hope of having a purposeful and impactful career. Below are some of my interests:
           </motion.p>
+      </div>
 
-          <div className='mt-20 flex flex-wrap gap-10'>
-              {services.map((service, index) => (
-                  <ServiceCard key={service.title} index={index} {...service} />
-              ))}
-          </div>
-      </>
+      <div className='mt-20 flex flex-wrap gap-10'>
+          {services.map((service, index) => (
+              <ServiceCard key={service.title} index={index} {...service} />
+          ))}
+      </div>
+    </>
   );
 };
 
