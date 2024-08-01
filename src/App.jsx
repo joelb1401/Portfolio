@@ -1,17 +1,17 @@
 import React from "react";
-import { HashRouter, Routes, Route, Navigate } from "react-router-dom";
+import { BrowserRouter, Routes, Route, Navigate } from "react-router-dom";
 import Game from "./components/Game";
 import Portfolio from "./components/Portfolio";
 
 const App = () => {
   return (
-    <HashRouter>
+    <BrowserRouter>
       <Routes>
-        <Route path="/" element={<Game />} />
-        <Route path="/portfolio" element={<Portfolio />} />
-        <Route path="*" element={<Navigate to="/" replace />} />
+        <Route path="/Portfolio/" element={<Game />} />
+        <Route path="/Portfolio/portfolio" element={<Portfolio />} />
+        <Route path="*" element={<Navigate to="/Portfolio/" replace />} />
       </Routes>
-    </HashRouter>
+    </BrowserRouter>
   );
 };
 
