@@ -69,7 +69,7 @@ function Game() {
   }, []);
 
   const handleViewPortfolio = () => {
-    navigate('/Portfolio/portfolio');
+    navigate('/portfolio');
   };
 
   useEffect(() => {
