@@ -3,7 +3,7 @@ import Tilt from 'react-parallax-tilt';
 import { motion } from "framer-motion";
 
 import { styles } from "../styles";
-import { services } from "../constants";
+import {services, technologies} from "../constants";
 import { SectionWrapper } from "../hoc";
 import { fadeIn, textVariant } from "../utils/motion";
 
@@ -39,21 +39,8 @@ const About = () => {
   return (
       <>
           <motion.div variants={textVariant()}>
-              <p className={styles.sectionSubText}>Introduction</p>
-              <h2 className={styles.sectionHeadText}>Overview.</h2>
+              <h2 className={styles.sectionHeadText}>Skills.</h2>
           </motion.div>
-
-          <motion.p
-              variants={fadeIn("", "", 0.1, 1)}
-              className='mt-3 text-secondary text-[17px] max-w-3xl leading-[30px]'
-          >
-              I'm a skilled mathematician with a particular interest in probability and its
-              financial implications. I have some of the top grades in my cohort with an 85%
-              overall average grade and a 97% average grade across my last three probability
-              modules. I give 100% effort in everything that I do, and I'm passionate
-              about putting my skills and work ethic to good use in the finance industry,
-              with the hope of having a purposeful and impactful career. Below are some of my interests:
-          </motion.p>
 
           <div className='mt-20 flex flex-wrap gap-10'>
               {services.map((service, index) => (
