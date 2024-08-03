@@ -1,7 +1,7 @@
 import React from "react";
 import { BrowserRouter, Routes, Route, Navigate } from "react-router-dom";
 import Game from "./components/Game";
-import Portfolio from "./components/Portfolio";
+import Portfolio from "./Portfolio.jsx";
 
 const App = () => {
   return (

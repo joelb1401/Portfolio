@@ -1,12 +1,12 @@
 import React from "react";
-import Navbar from "./Navbar";
-import Hero from "./Hero";
-import About from "./About";
-import Experience from "./Experience";
-import Tech from "./Tech";
-import Works from "./Works";
-import Education from "./Education";
-import Other_Experience from "./Other_Experience";
+import Navbar from "./components/Navbar.jsx";
+import Hero from "./components/Hero.jsx";
+import About from "./components/About.jsx";
+import Experience from "./components/Experience.jsx";
+import Tech from "./components/Tech.jsx";
+import Works from "./components/Works.jsx";
+import Education from "./components/Education.jsx";
+import Other_Experience from "./components/Other_Experience.jsx";
 
 const Portfolio = () => {
   return (
