@@ -43,7 +43,7 @@ const About = () => {
               <h2 className={styles.sectionHeadText}>Overview.</h2>
           </motion.div>
 
-          <motion.div
+          <motion.p
               variants={fadeIn("", "", 0.1, 1)}
               className='mt-3 text-secondary text-[17px] max-w-3xl leading-[30px]'
           >
@@ -53,7 +53,7 @@ const About = () => {
               modules. I give 100% effort in everything that I do, and I'm passionate
               about putting my skills and work ethic to good use in the finance industry,
               with the hope of having a purposeful and impactful career. Below are some of my interests:
-          </motion.div>
+          </motion.p>
 
           <div className='mt-20 flex flex-wrap gap-10'>
               {services.map((service, index) => (
