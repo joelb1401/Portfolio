@@ -31,6 +31,7 @@ import jobit from "./jobit.png";
 import fxalgo from "./fxalgo.png";
 import option from "./option.png";
 import monty from "./monty.png";
+import macro from "./macro.png";
 
 import amplify from "./amplify.png";
 import jpmorgan from "./jpmorgan.png";
@@ -73,4 +74,5 @@ export {
   springfield,
   golf,
   football,
+  macro,
 };

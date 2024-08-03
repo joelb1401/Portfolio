@@ -28,6 +28,7 @@ import {
   springfield,
   golf,
   football,
+  macro,
 } from "../assets";
 
 export const navLinks = [
@@ -400,6 +401,27 @@ const other_experience = [
     ],
     image: jpmorgan,
     source_code_link: "https://github.com/joelb1401/JPMibsim",
+  },
+  {
+    name: "MacroVoices Podcast",
+    description:
+      "To keep up-to-date on the current relevant macroeconomic events and learn about how they affect the markets, I listen to the weekly podcast by Erik Townsend and Patrick Ceresna.",
+    tags: [
+      {
+        name: "Macroeconomics",
+        color: "blue-text-gradient",
+      },
+      {
+        name: "Investment",
+        color: "green-text-gradient",
+      },
+      {
+        name: "Politics",
+        color: "pink-text-gradient",
+      },
+    ],
+    image: macro,
+    source_code_link: "https://www.macrovoices.com/",
   },
 ];
 
