@@ -10,7 +10,7 @@ import { fadeIn, textVariant } from "../utils/motion";
 const ServiceCard = ({ index, title, icon }) => (
   <Tilt className='xs:w-[250px] w-full'>
     <motion.div
-      variants={fadeIn("right", "spring", index * 0.5, 0.75)}
+      variants={fadeIn("up", "spring", index * 0.5, 0.75)}
       className='w-full green-pink-gradient p-[1px] rounded-[20px] shadow-card'
     >
       <div
@@ -44,7 +44,7 @@ const About = () => {
           </motion.div>
 
           <motion.p
-              
+              variants={fadeIn("", "", 0.1, 1)}
               className='mt-3 text-secondary text-[17px] max-w-3xl leading-[30px]'
           >
               I'm a skilled mathematician with a particular interest in probability and its
