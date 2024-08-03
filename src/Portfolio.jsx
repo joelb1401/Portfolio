@@ -15,8 +15,8 @@ const Portfolio = () => {
         <Navbar />
         <Hero />
       </div>
-      <Education />
       <About />
+      <Education />
       <Experience />
       <Works />
       <Other_Experience />
