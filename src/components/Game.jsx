@@ -95,7 +95,7 @@ function Game() {
         <h1 className="game-title">The Monty Hall Problem</h1>
 
         <div id="game-explanation">
-          Welcome to the Monty Hall Problem! Behind one of these doors is a car, and behind the other two are goats. Choose a door to try and find the car, and then you'll have the option to switch doors. Good luck!
+          Welcome to the Monty Hall Problem! Behind one of these doors is a car, and behind the other two are goats. Choose a door to try and find the car, and then you'll have the option to switch doors. If you win the car, you can view my portfolio! Good luck!
         </div>
 
         <div id="doors-container">
