@@ -6,7 +6,7 @@ import { staggerContainer } from "../utils/motion";
 const StarWrapper = (Component, idName) =>
   function HOC() {
     const ref = React.useRef(null);
-    const isInView = useInView(ref, { once: true, amount: 0.1 });
+    const isInView = useInView(ref, { once: true, amount: 0.2 });
 
     return (
       <motion.section
