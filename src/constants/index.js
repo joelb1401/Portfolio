@@ -29,6 +29,7 @@ import {
   golf,
   football,
   macro,
+  breakin,
 } from "../assets";
 
 export const navLinks = [
@@ -335,6 +336,31 @@ const projects = [
     ],
     image: monty,
     source_code_link: "https://github.com/joelb1401/MHgame",
+  },
+  {
+    name: "BreakIn",
+    description:
+      "As of July 2024, I saw a gap in the student/professional networking market. I realised, from my own experience, that finding the right people to connect with is time-consuming, even with LinkedIn. I thought of creating a service that could quickly find the professionals most relevant to someone, use an algorithm to rank them from most to least relevant, then use AI to write the best connection message for them. This could provide a quick and easy way to help students break into industry. However, unless I pay tens-of-thousands for the LinkedIn database, there is no legal way to search for professionals via code. See hiQ Labs, Inc. v. LinkedIn Corp., 938 F.3d 985 (9th Cir. 2019).",
+    tags: [
+      {
+        name: "AI",
+        color: "blue-text-gradient",
+      },
+      {
+        name: "Entrepreneurial",
+        color: "green-text-gradient",
+      },
+      {
+        name: "HTML",
+        color: "pink-text-gradient",
+      },
+      {
+        name: "JavaScript",
+        color: "orange-text-gradient",
+      },
+    ],
+    image: breakin,
+    source_code_link: "https://joelb1401.github.io/BreakIn/",
   },
 ];
 

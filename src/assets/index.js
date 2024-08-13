@@ -32,6 +32,7 @@ import fxalgo from "./fxalgo.png";
 import option from "./option.png";
 import monty from "./monty.png";
 import macro from "./macro.png";
+import breakin from "./breakin.png";
 
 import amplify from "./amplify.png";
 import jpmorgan from "./jpmorgan.png";
@@ -75,4 +76,5 @@ export {
   golf,
   football,
   macro,
+  breakin,
 };
