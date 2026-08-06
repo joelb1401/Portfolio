@@ -1,24 +1,35 @@
-import { ComputersCanvas } from './canvas';
-import Hero from "./Hero";
-import Navbar from "./Navbar";
+import Grades from "./Grades";
+import KeyboardNav from "./KeyboardNav";
+import Menu from "./Menu";
+import MontyFigure from "./MontyFigure";
+import Prizes from "./Prizes";
+import ReadingProgress from "./ReadingProgress";
+import Reveal from "./Reveal";
+import Section from "./Section";
+import SectionRail from "./SectionRail";
+import StudyYear from "./StudyYear";
 import About from "./About";
-import Tech from "./Tech";
+import Arbor from "./Arbor";
 import Education from "./Education";
 import Experience from "./Experience";
+import ProjectEntry from "./ProjectEntry";
 import Works from "./Works";
-import Other_Experience from "./Other_Experience";
-import CanvasLoader from "./Loader";
-
 
 export {
-  Hero,
-  Navbar,
+  Grades,
+  KeyboardNav,
+  Menu,
+  MontyFigure,
+  Prizes,
+  ReadingProgress,
+  Reveal,
+  Section,
+  SectionRail,
+  StudyYear,
   About,
-  Tech,
+  Arbor,
   Education,
   Experience,
+  ProjectEntry,
   Works,
-  Other_Experience,
-  CanvasLoader,
-  ComputersCanvas
 };

@@ -2,9 +2,19 @@
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
-    <link rel="icon" type="image/svg+xml" href="/logo.svg" />
+    <!-- No favicon. The empty data URI stops the browser falling back to
+         requesting /favicon.ico and 404ing. -->
+    <link rel="icon" href="data:," />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Joel's Portfolio</title>
+    <!-- Arbor's three faces, for the Arbor band only. The rest of the
+         page runs on the self-hosted CMU Serif. -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=DM+Mono:wght@400&family=Inter:wght@400;500&family=Newsreader:opsz,wght@6..72,400&display=swap"
+    />
+    <title>Joel Bassil</title>
   </head>
   <body>
     <div id="root"></div>

@@ -27,3 +27,6 @@ dist-ssr
 
 # vscode
 .vscode
+# Personal records kept locally, not published
+src/assets/ASS_self_service_transcript*.pdf
+src/assets/prize.jpeg

@@ -1,91 +1,70 @@
 import React from "react";
-import {
-  VerticalTimeline,
-  VerticalTimelineElement,
-} from "react-vertical-timeline-component";
-import { motion } from "framer-motion";
 
-import "react-vertical-timeline-component/style.min.css";
-
-import { styles } from "../styles";
+import Grades from "./Grades";
+import Prizes from "./Prizes";
+import Reveal from "./Reveal";
+import Section from "./Section";
+import StudyYear from "./StudyYear";
 import { education } from "../constants";
-import { SectionWrapper } from "../hoc";
-import { textVariant } from "../utils/motion";
 
-const EducationCard = ({ education }) => {
-  return (
-    <VerticalTimelineElement
-      contentStyle={{
-        background: "#1d1836",
-        color: "#fff",
-      }}
-      contentArrowStyle={{ borderRight: "7px solid  #232631" }}
-      date={education.date}
-      iconStyle={{ background: education.iconBg }}
-      icon={
-        <div className='flex justify-center items-center w-full h-full'>
+const gradesLabel = (type) =>
+  type === "university" ? "Notable modules" : "Subjects";
+
+// A course with no grade yet must not be left with a dangling separator.
+const metaLine = (item) => [item.course, item.grades].filter(Boolean).join(" · ");
+
+const Education = () => (
+  <Section id="education">
+    {education.map((item, index) => (
+      <Reveal
+        key={`${item.school}-${item.course ?? item.date}`}
+        className="entry row"
+        delay={Math.min(index, 3) * 60}
+      >
+        <div className="entry__aside">
           <img
-            src={education.icon}
-            alt={education.course}
-            className='w-[80%] h-[80%] object-contain'
+            className="entry__logo"
+            src={item.icon}
+            alt=""
+            width="36"
+            height="36"
+            loading="lazy"
+            decoding="async"
           />
-        </div>
-      }
-    >
-        <div>
-            <h3 className='text-white text-[24px] font-bold'>{education.school}</h3>
-            <p
-                className='text-secondary text-[16px] font-semibold'
-                style={{margin: 0}}
-            >
-                {education.course}
-            </p>
-            <p
-                className='text-secondary text-[16px] font-semibold'
-                style={{margin: 0}}
-            >
-                Grade(s): {education.grades}
-            </p>
+          <span className="entry__date">{item.date}</span>
         </div>
 
-        <ul className='mt-5 list-disc ml-5 space-y-2'>
-            {education.points.map((point, index) => (
-                <li
-                    key={`education-point-${index}`}
-            className='text-white-100 text-[14px] pl-1 tracking-wider'
-          >
-            {point}
-          </li>
-        ))}
-      </ul>
-    </VerticalTimelineElement>
-  );
-};
+        <div className="entry__body">
+          <h3 className="entry__title">{item.school}</h3>
+          {metaLine(item) && <p className="entry__meta">{metaLine(item)}</p>}
 
-const Education = () => {
-  return (
-    <>
-      <motion.div variants={textVariant()}>
-        <p className={`${styles.sectionSubText} text-center`}>
-          What I have learnt so far
-        </p>
-        <h2 className={`${styles.sectionHeadText} text-center`}>
-          Education.
-        </h2>
-      </motion.div>
+          <Prizes items={item.prizes} />
 
-      <div className='mt-20 flex flex-col'>
-        <VerticalTimeline>
-          {education.map((education, index) => (
-            <EducationCard
-              key={`education-${index}`}
-              education={education}
-            />
-          ))}
-        </VerticalTimeline>
-      </div>
-    </>
-  );
-};
+          {item.points?.length > 0 && (
+            <ul className="entry__points">
+              {item.points.map((point) => (
+                <li key={point}>{point}</li>
+              ))}
+            </ul>
+          )}
 
-export default SectionWrapper(Education, "education");
+          <Grades label={gradesLabel(item.type)} items={item.subjects} />
+
+          {item.years?.length > 0 && (
+            <div className="years">
+              {item.years.map((year) => (
+                <StudyYear
+                  key={year.name}
+                  gradesLabel={gradesLabel(item.type)}
+                  {...year}
+                />
+              ))}
+            </div>
+          )}
+        </div>
+      </Reveal>
+    ))}
+  </Section>
+);
+
+export default Education;

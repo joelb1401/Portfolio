@@ -16,7 +16,7 @@
     padding-top: clamp(2.5rem, 7vh, 4.5rem);
     padding-right: 1.5rem;
     padding-bottom: 4rem;
-    padding-left: clamp(1.5rem, 10vw, 9.5rem);
+    padding-left: clamp(1.5rem, 8vw, 8rem);
     text-align: left;
 }
 
@@ -39,14 +39,10 @@
 }
 
 /* ---------------------------- Doors ---------------------------- */
-/* A door hinges on its left edge and swings towards the viewer, so
-   perspective throws its free edge roughly 0.2x its own width past the
-   frame. The gap is kept wider than that so an open door never lands on
-   its neighbour. */
 .monty-hall-game #doors-container {
     display: grid;
     grid-template-columns: repeat(3, minmax(0, 1fr));
-    gap: clamp(1.5rem, 7vw, 3.5rem);
+    gap: clamp(0.75rem, 3vw, 2rem);
     max-width: 40rem;
     margin: 0;
 }
@@ -154,7 +150,27 @@
     object-fit: cover;
 }
 
-/* ------------------------ Host is thinking ----------------------- */
+/* --------------------------- The host --------------------------- */
+.monty-hall-game #host-character {
+    width: 110px;
+    height: 220px;
+    background: no-repeat bottom / contain;
+    grid-column: 2;
+    align-self: end;
+    margin-left: clamp(1rem, 4vw, 3rem);
+    pointer-events: none;
+    transition: transform 0.3s ease;
+}
+
+.monty-hall-game #host-character.thinking {
+    animation: host-thinking-pulse 1.2s ease-in-out infinite;
+}
+
+@keyframes host-thinking-pulse {
+    0%, 100% { transform: translateY(0); }
+    50% { transform: translateY(-4px); }
+}
+
 .monty-hall-game .thinking-dots span {
     animation: thinking-dot-blink 1.4s infinite;
     opacity: 0.2;
@@ -213,11 +229,20 @@
 /* ------------------------- Narrow screens ------------------------ */
 @media (max-width: 56rem) {
     .monty-hall-game #game-container {
+        grid-template-columns: minmax(0, 1fr);
         padding-bottom: 3rem;
     }
 
     .monty-hall-game #game-explanation {
         margin-bottom: 2rem;
+    }
+
+    .monty-hall-game #host-character {
+        grid-column: 1;
+        width: 70px;
+        height: 140px;
+        margin-left: 0;
+        margin-top: 1rem;
     }
 
     .monty-hall-game #message-container {

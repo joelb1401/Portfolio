@@ -1,27 +1,43 @@
 import React from "react";
-import Navbar from "./components/Navbar.jsx";
-import Hero from "./components/Hero.jsx";
+
+import KeyboardNav from "./components/KeyboardNav.jsx";
+import Menu from "./components/Menu.jsx";
+import ReadingProgress from "./components/ReadingProgress.jsx";
+import SectionRail from "./components/SectionRail.jsx";
 import About from "./components/About.jsx";
-import Experience from "./components/Experience.jsx";
-import Tech from "./components/Tech.jsx";
-import Works from "./components/Works.jsx";
+import Arbor from "./components/Arbor.jsx";
+import BackToTop from "./components/BackToTop.jsx";
 import Education from "./components/Education.jsx";
-import Other_Experience from "./components/Other_Experience.jsx";
+import Experience from "./components/Experience.jsx";
+import Works from "./components/Works.jsx";
 
 const Portfolio = () => {
   return (
-    <div className='relative z-0 bg-primary'>
-      <div className='bg-hero-pattern bg-cover bg-no-repeat bg-center'>
-        <Navbar />
-        <Hero />
-      </div>
-      <About />
-      <Education />
-      <Experience />
-      <Works />
-      <Other_Experience />
-      <Tech />
-    </div>
+    <>
+      <ReadingProgress />
+      <SectionRail />
+      <Menu />
+
+      <main className="page">
+        <header className="masthead" id="home">
+          <h1 className="masthead__name">Joel Bassil</h1>
+          <p className="masthead__subtitle">
+            PhD Student in Statistical and Applied Mathematics (SAMBa), University of Bath
+          </p>
+          <hr className="rule" />
+        </header>
+
+        <About />
+        <Arbor />
+        <Education />
+        <Works />
+        <Experience />
+
+        <BackToTop />
+      </main>
+
+      <KeyboardNav />
+    </>
   );
 };
 

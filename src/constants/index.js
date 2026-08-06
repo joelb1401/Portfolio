@@ -1,454 +1,330 @@
 import {
-  excel,
-  trading,
-  ai,
-  dice,
-  tutor,
-  plate,
-  javascript,
-  html,
-  css,
   jb,
   bdo,
-  bright,
   bath,
   bhlive,
+  navy,
   pwc,
-  mna,
-  fxalgo,
-  option,
-  monty,
-  powerpoint,
-  python,
-  R,
-  word,
-  amplify,
-  jpmorgan,
   college,
   springfield,
-  golf,
-  football,
-  macro,
-  breakin,
 } from "../assets";
+
+import bscProject from "../assets/research/Percolation, Random Walks, and Minimal Cutsets on Infinite Graphs - Joel Bassil (BSc Project)_compressed.pdf";
+import bscPresentation from "../assets/research/Presentation.pdf";
+import bscCover from "../assets/research/project-cover.png";
+import sambaReport from "../assets/research/Compressed report.pdf";
+import sambaPresentation from "../assets/research/summer Presentation.pdf";
+import sambaCover from "../assets/research/samba-cover.png";
 
 export const navLinks = [
   {
+    id: "home",
+    title: "Home",
+    number: "",
+  },
+  {
     id: "about",
-    title: "About",
+    title: "Abstract",
+    number: "",
   },
   {
     id: "education",
     title: "Education",
-  },
-  {
-    id: "work",
-    title: "Work",
+    number: "1",
   },
   {
     id: "projects",
-    title: "Projects",
+    title: "Research",
+    number: "2",
   },
   {
-    id: "other_experience",
-    title: "Other Experience",
-  },
-  {
-    id: "tech",
-    title: "Skills",
+    id: "work",
+    title: "Work Experience",
+    number: "3",
   },
 ];
 
-const services = [
-  {
-    title: "Mathematician",
-    icon: dice,
-  },
-  {
-    title: "Financial Modelling",
-    icon: excel,
-  },
-  {
-    title: "Algorithmic Trading",
-    icon: trading,
-  },
-  {
-    title: "Mathematics With AI",
-    icon: ai,
-  },
-  {
-    title: "Mathematics Tutor",
-    icon: tutor,
-  },
-  {
-    title: "Powerlifter",
-    icon: plate,
-  },
-  {
-    title: "Golf",
-    icon: golf,
-  },
-  {
-    title: "Football",
-    icon: football,
-  },
-];
+export const sectionNumber = (id) =>
+  navLinks.find((link) => link.id === id)?.number ?? "";
 
-const technologies = [
-  {
-    name: "HTML 5",
-    icon: html,
-  },
-  {
-    name: "CSS 3",
-    icon: css,
-  },
-  {
-    name: "JavaScript",
-    icon: javascript,
-  },
-  {
-    name: "Python",
-    icon: python,
-  },
-  {
-    name: "R",
-    icon: R,
-  },
-  {
-    name: "Excel",
-    icon: excel,
-  },
-  {
-    name: "Word",
-    icon: word,
-  },
-  {
-    name: "Powerpoint",
-    icon: powerpoint,
-  },
-];
-
+// Mirrors the Experience section of linkedin.com/in/joelbassil: same
+// roles, same order, same wording. Royal Navy has no logo in assets yet.
 const experiences = [
   {
-    title: "Audit Intern",
-    company_name: "BDO",
-    icon: bdo,
-    iconBg: "#E6DEDD",
-    date: "2024",
-    points: [
-      "Auditing a wide range of clients, including private equity firms.",
-      "Performing stock counts and meeting clients on client sites, developing professional relationships.",
-    ],
-  },
-  {
-    title: "Virtual Finance & Consulting Intern",
-    company_name: "Bright Network, IEUK",
-    icon: bright,
-    iconBg: "#E6DEDD",
-    date: "June 2024",
-    points: [
-      "Audited a fictitious company, successfully correcting all financial statement errors. ",
-      "Learnt and applied the concept of materiality and PESTLE analysis.",
-      "Compiled a clearance agenda for a closing meeting with the client.",
-    ],
-  },
-  {
-    title: "Lead AI Researcher - AI VIP",
-    company_name: "University of Bath",
+    title: "Teaching Assistant",
+    company_name: "University of Bath · Part-time",
     icon: bath,
     iconBg: "#E6DEDD",
-    date: "Jan 2024 - June 2024",
+    date: "Oct 2025 - Present",
     points: [
-      "Lead researcher within a team of students and academic professionals that collaborated to leverage AI for mathematical problem-solving.",
-      "Delivered weekly presentations to share research progress and innovative project strategies.",
-      "Implemented AI APIs for use in sophisticated prompt engineering.",
+      "Algebra and introductory number theory tutor to first year undergraduates, as a final-year undergraduate myself.",
     ],
+  },
+  {
+    title: "Mathematics Research Intern (SAMBa)",
+    href: "#samba-project",
+    company_name: "University of Bath · Full-time",
+    icon: bath,
+    iconBg: "#E6DEDD",
+    date: "Jun 2025 - Aug 2025",
+    points: [
+      "Researching controlled measure-valued martingales and associated machine learning methods. More specifically, applying (a novel approach to) the Deep 2BSDE ML method in the context of a filtering (optimisation and control) problem. Building on research by Professor Alex Cox.",
+    ],
+  },
+  {
+    title: "Audit Industrial Placement",
+    company_name: "BDO · Internship",
+    icon: bdo,
+    iconBg: "#E6DEDD",
+    date: "Sep 2024 - Jun 2025",
+    points: [],
   },
   {
     title: "Mathematics Tutor",
-    company_name: "University of Bath",
+    company_name: "University of Bath · Part-time",
     icon: bath,
     iconBg: "#E6DEDD",
     date: "Sep 2023 - Feb 2024",
     points: [
-      "Tutored groups of A level students, representing the teaching quality of the university.",
-      "Achieved a 20% increase in the number of questions answered correctly per session, and a 100% attendance record.",
+      "A-level Mathematics Tutor as part of a college partnership on behalf of Professor Jane White",
     ],
   },
   {
-    title: "Online Personal Trainer and Transformation Coach",
-    company_name: "JB Coaching",
+    title: "Online Personal Trainer",
+    company_name: "JB Coaching · Self-employed",
     icon: jb,
     iconBg: "#383E56",
     date: "Jan 2022 - Oct 2022",
     points: [
-      "Simultaneously designed tailored fitness programs for a diverse range of clients, each one to fit their specific needs.",
-      "An adaptable and client-focused approach led to a minimum of a 10% decrease in body fat per client.",
-      "Utilised excel to perform multiple data analyses on progress to model and extrapolate future client goals.",
+      "Transforming clients' physical and mental lifestyle through exercise, diet, and stress management.",
     ],
   },
   {
+    // The two BH Live roles ran concurrently; LinkedIn groups them under
+    // one company, and here they read as one.
     title: "Personal Trainer and Wall Climbing Instructor",
-    company_name: "BH Live Active",
+    company_name: "BH Live · Part-time",
     icon: bhlive,
     iconBg: "#E6DEDD",
-    date: "June 2021 - Oct 2022",
+    date: "Jan 2021 - Oct 2022",
     points: [
-      "Juggled two roles within the same company, facilitating the upkeep of both the wall climbing facility and the gym.",
-      "Taught customers how to use both facilities, while ensuring correct and safe practise.",
+      "Simultaneously a gym floor personal trainer and wall climbing instructor, taking lead roles in both.",
     ],
   },
   {
     title: "Spring Intern",
-    company_name: "PWC",
+    company_name: "PwC · Internship",
     icon: pwc,
     iconBg: "#E6DEDD",
-    date: "April 2021",
+    date: "2021 - 2021",
     points: [
-      "Shadowed roles in audit, technology and operations.",
-      "Completed a consultancy project to find and test solutions for reducing carbon emissions and decreasing tax while maintaining product quality.",
-      "Acquired strategies to manage stress and navigate challenges like impostor syndrome with confidence.",
+      "Completed a consultancy project to find and test solutions for reducing carbon emissions and decrease tax while maintaining product quality.",
     ],
+  },
+  {
+    title: "Naval Air Squadron Engineer",
+    company_name: "Royal Navy · Internship",
+    icon: navy,
+    iconBg: "#E6DEDD",
+    date: "2019 - 2019",
+    points: [],
   },
 ];
 
+/**
+ * Every entry may carry `prizes`, listed under the course line:
+ *
+ *   prizes: [{ name, date, description }]   date and description optional
+ *
+ * `type` decides what else it may carry:
+ *
+ *   university — `years`, each optionally holding
+ *                  average:      the year's average, shown by its title
+ *                  dissertation: { title, description }
+ *                  modules:      [{ name, grade }]
+ *                  note:         a line under the year
+ *   college    — `subjects`: [{ name, grade }]
+ *   school     — `points`: plain bullets
+ *
+ * Anything left out is simply not laid out, so an entry with no prizes,
+ * or a year with no dissertation, leaves no gap on the page.
+ */
 const education = [
   {
     school: "University of Bath",
-    course: "BSc (hons) Mathematics",
-    grades: "85% (First)",
+    type: "university",
+    course: "PhD in Statistical and Applied Mathematics (SAMBa)",
     icon: bath,
     iconBg: "#E6DEDD",
-    date: "2022-Present",
-    points: [
-      "Year 1: Probability & Statistics (95%), Vector Calculus (97%), Python Coursework (89%).",
-      "Year 2: Probability 2A (100%), Probability 2B (97%), ODEs & Control (95%), Numerical Analysis Python Coursework (94%). Top of year in all 4.",
+    date: "Sep 2026 - Present",
+    prizes: [],
+  },
+  {
+    school: "University of Bath",
+    type: "university",
+    course: "BSc (hons) Mathematics",
+    grades: "87% degree average (First-class)",
+    icon: bath,
+    iconBg: "#E6DEDD",
+    date: "2022 - 2026",
+    prizes: [
+      {
+        name: "FH Jackson Prize for Mathematics",
+        date: "2025/26",
+        description: "For top performance in pure mathematics.",
+      },
+    ],
+    // Modules listed are those marked 90% or above, highest first.
+    years: [
+      {
+        name: "Year 1",
+        average: "86%",
+        modules: [
+          { name: "Vectors, vector calculus and mechanics", grade: "97%" },
+          { name: "Probability & statistics 1B", grade: "95%" },
+          { name: "Algebra 1B", grade: "90%" },
+        ],
+      },
+      {
+        name: "Year 2",
+        average: "85%",
+        modules: [
+          { name: "Probability 2A", grade: "100%" },
+          { name: "Probability 2B", grade: "97%" },
+          { name: "Ordinary differential equations and control", grade: "95%" },
+        ],
+      },
+      {
+        name: "Year 3",
+        average: "88%",
+        modules: [
+          { name: "Number theory and cryptography", grade: "96%" },
+          { name: "Discrete probability", grade: "96%" },
+          { name: "Measure theory and integration", grade: "92%" },
+          { name: "Probability and finance", grade: "90%" },
+          {
+            name: "Final-year BSc project",
+            grade: "88%",
+            href: "#bsc-project",
+          },
+        ],
+      },
     ],
   },
   {
     school: "City of Portsmouth College",
-    course: "Maths, Further Maths, Physics",
+    type: "college",
+    course: "A Levels",
     grades: "A*A*A*",
     icon: college,
     iconBg: "#E6DEDD",
     date: "2020 - 2022",
-    points: [
+    prizes: [
+      {
+        name: "'Excellence in Mathematics' Award",
+        description: "For top performance in mathematics.",
+      },
+    ],
+    subjects: [
+      { name: "Mathematics", grade: "A*" },
+      { name: "Further Mathematics", grade: "A*" },
+      { name: "Physics", grade: "A*" },
     ],
   },
   {
     school: "Springfield School",
+    type: "school",
     grades: "99999999977 and L3 Excel Methods",
     icon: springfield,
     iconBg: "#E6DEDD",
     date: "2015 - 2020",
+    prizes: [],
     points: [
       "9 in Maths, Further Maths and English Language."
     ],
   },
 ];
 
+/**
+ * A research entry may carry:
+ *
+ *   name              the title, printed after the automatic "2.1"
+ *   description       the paragraph of body text
+ *   tags              keywords, listed under the description
+ *   image             the figure in the left margin, imported from ../assets
+ *   live              "monty" runs the simulation in the margin instead
+ *   source_code_link  the link at the foot of the entry
+ *
+ * Only `name` is required. Anything left out simply isn't laid out, so
+ * an entry with no figure or no link leaves no gap behind it.
+ */
 const projects = [
   {
-    name: "M&A Student Handbook",
-    description:
-      "I found that the content involved with M&A investment banking was simple, but explained poorly and in an unstructured way online. I did what any normal person would do in this situation, and write a book! This book gives a brief but holistic and comprehensive overview of M&A, in a way that is understandable and structured for someone with limited background knowledge.",
+    id: "bsc-project",
+    name: "Percolation, Random Walks, and Minimal Cutsets on Infinite Graphs",
+    meta: "Bachelor's project · Supervised by Dr Christoforos Panagiotis, University of Bath · April 2026",
+    image: bscCover,
+    description: [
+      "This project studies two fundamental areas of modern probability theory: random walks on graphs and percolation theory. Foundational material is studied from [PO] and [Gri99], covering Bernoulli bond and site percolation, phase transitions, the classical Peierls argument, and the FKG inequality. We then develop the theory of electrical networks and isoperimetric profiles, culminating in a proof that graphs with isoperimetric dimension greater than 2 are uniformly transient.",
+      "We provide a thorough exposition of the paper [EST25], which establishes connections between percolation thresholds and transience of random walks on infinite graphs. This paper encapsulates how probabilistic ideas can be used to obtain deterministic structural results for graphs. We conclude this review with a careful discussion about the 'gap at 1' phenomenon for the critical parameter on transitive graphs.",
+      "We conjecture that the same results of [EST25] are true in the case of site percolation, and attempt to prove them via the same methods. However, we see that this is in fact not possible, and give counterexamples illustrating this. In particular, we show that the prescription of exposed vertex boundaries is too 'expensive'. We consider the class of line graphs to illustrate the difficulties encountered, and prove intermediate results for graphs of bounded degree. We make an original contribution by deducing a corollary which partially extends results by Panagiotis and Severo [PS23], and partially resolves a conjecture posed by Benjamini and Schramm [BS96].",
+    ],
     tags: [
+      "Percolation",
+      "Random walks",
+      "Electrical networks",
+      "Isoperimetric inequalities",
+      "Minimal cutsets",
+      "Transience",
+      "Infinite graphs",
+    ],
+    documents: [
       {
-        name: "M&A",
-        color: "blue-text-gradient",
+        label: "Read the report",
+        title: "Percolation, Random Walks, and Minimal Cutsets on Infinite Graphs",
+        file: bscProject,
       },
       {
-        name: "DCF Analysis",
-        color: "green-text-gradient",
-      },
-      {
-        name: "Financial Statements",
-        color: "pink-text-gradient",
+        label: "See the presentation",
+        title: "Bachelor's project presentation",
+        file: bscPresentation,
       },
     ],
-    image: mna,
-    source_code_link: "https://github.com/joelb1401/MAhb",
   },
   {
-    name: "Options Pricer",
-    description:
-      "Machine learning implementation in Python using a Random Forest model to price QQQ (Invesco QQQ Trust) options. Also included is the document of the steps I took to create this and what I learnt.",
+    id: "samba-project",
+    name: "Controlled Measure-valued Martingales and Associated Machine Learning Methods",
+    meta: "SAMBa summer placement · Supervised by Chaorui Wang, University of Bath · August 2025",
+    image: sambaCover,
+    description: [
+      "This report presents an implementation and comprehensive analysis of the deep 2BSDE (second-order backward stochastic differential equation) method for solving stochastic optimal control problems and their associated Hamilton-Jacobi-Bellman (HJB) equations. We begin with a thorough exposition of Brownian motion, stochastic calculus, the Itô formula, and the Euler-Maruyama discretization scheme, establishing the theoretical foundation for understanding second-order BSDEs and their connection to fully nonlinear parabolic partial differential equations.",
+      "We first validate our implementation against a stochastic linear-quadratic control problem with known analytical solutions, demonstrating excellent convergence properties with approximation errors on the order of 10\u207B³. We then conduct dimension scaling analysis up to d = 100, revealing exponential growth in computational time and linear scaling in loss with increasing dimension.",
+      "This understanding lays the foundation to substitute the Itô process for measure-valued martingale processes. We implement a three-dimensional process supported on {-1, 0, 1} with a sophisticated cost function incorporating variance and covariance terms, while enforcing constraints to ensure the process remains within the simplex domain. We provide a detailed mathematical analysis of the discretization scheme's recursion relation, which reveals why loss inevitably becomes large for certain parameter combinations. Through examination of the update equations, we demonstrate that the discrete approximation exhibits exponential growth in the final time T, leading to systematic errors that cannot be eliminated through parameter tuning alone.",
+      "We also compare control optimization algorithms, finding that while increasing iterations improves early-stage control approximation, particularly for the first time-step, L-BFGS outperforms ADAM significantly over all time steps. Additional investigations cover discretization parameter optimization and boundary absorption effects.",
+      "Finally, we demonstrate applications in mathematical finance by solving the classical Merton portfolio optimization problem, and how to interpret the results of the algorithm.",
+      "An interesting take-away from the simulations in the project is that controlling the data process within the 2BSDE seems to pose no issues. In the method construction, the data process takes an auxiliary control, since it is actually irrelevant to the success of the algorithm. If we instead run the simulations but use the optimal control in the update equations at each time step instead of the auxiliary control, the results look almost identical. However, one of our investigations indicated that the further away the auxiliary control is from the optimal control, the longer it took for convergence of loss. Hence, it would seem that using the optimal control instead of the auxiliary control and essentially using a modified C2BSDE (controlled 2BSDE) method, we are likely to see faster convergence. It appears that this approach has not been seen before, so a rigorous construction of the method and proof that a solution still exists and is unique may be an interesting direction to pursue.",
+    ],
     tags: [
+      "Deep 2BSDE",
+      "Stochastic optimal control",
+      "Hamilton-Jacobi-Bellman equations",
+      "Measure-valued martingales",
+      "Machine learning",
+      "Merton portfolio problem",
+    ],
+    documents: [
       {
-        name: "Python",
-        color: "blue-text-gradient",
+        label: "Read the report",
+        title: "Controlled Measure-valued Martingales and Associated Machine Learning Methods",
+        file: sambaReport,
       },
       {
-        name: "Machine Learning",
-        color: "green-text-gradient",
-      },
-      {
-        name: "Options",
-        color: "pink-text-gradient",
+        label: "See the presentation",
+        title: "SAMBa summer placement presentation",
+        file: sambaPresentation,
       },
     ],
-    image: option,
-    source_code_link: "https://github.com/joelb1401/Options-Pricer",
-  },
-  {
-    name: "FOREX Trading Algorithm",
-    description:
-      "A FOREX trading algorithm and its backtester that trades XAUUSD on the 5min TF according to a fine-tuned strategy with proper risk management. This is the result of over 10 different versions and strategy adjustments. It achieved a 6% return in one month.",
-    tags: [
-      {
-        name: "FOREX",
-        color: "blue-text-gradient",
-      },
-      {
-        name: "Risk Management",
-        color: "green-text-gradient",
-      },
-      {
-        name: "Python",
-        color: "pink-text-gradient",
-      },
-    ],
-    image: fxalgo,
-    source_code_link: "https://github.com/joelb1401/FXalgo",
-  },
-  {
-    name: "Monty Hall Website Entrance",
-    description:
-      "While wanting to create this portfolio website to improve and showcase my programming skills, I also wanted to personalise it by creating a 'gateway' that only allowed access if the user understands one of my favourite probability questions - the Monty Hall problem! Well done for getting this far. (By the way, the game was rigged to promote correct reasoning rather than luck).",
-    tags: [
-      {
-        name: "Probability",
-        color: "blue-text-gradient",
-      },
-      {
-        name: "CSS",
-        color: "green-text-gradient",
-      },
-      {
-        name: "HTML",
-        color: "pink-text-gradient",
-      },
-      {
-        name: "JavaScript",
-        color: "orange-text-gradient",
-      },
-    ],
-    image: monty,
-    source_code_link: "https://github.com/joelb1401/MHgame",
-  },
-  {
-    name: "BreakIn",
-    description:
-      "As of July 2024, I saw a gap in the student/professional networking market. I realised, from my own experience, that finding the right people to connect with is time-consuming, even with LinkedIn. I thought of creating a service that could quickly find the professionals most relevant to someone, use an algorithm to rank them from most to least relevant, then use AI to write the best connection message for them. This could provide a quick and easy way to help students break into industry. However, unless I pay tens-of-thousands for the LinkedIn database, there is no legal way to search for professionals via code. See hiQ Labs, Inc. v. LinkedIn Corp., 938 F.3d 985 (9th Cir. 2019).",
-    tags: [
-      {
-        name: "AI",
-        color: "blue-text-gradient",
-      },
-      {
-        name: "Entrepreneurial",
-        color: "green-text-gradient",
-      },
-      {
-        name: "HTML",
-        color: "pink-text-gradient",
-      },
-      {
-        name: "JavaScript",
-        color: "orange-text-gradient",
-      },
-    ],
-    image: breakin,
-    source_code_link: "https://joelb1401.github.io/BreakIn/",
   },
 ];
 
-const other_experience = [
-  {
-    name: "JP Morgan Chase Quantitative Research Job Simulation - Forage",
-    description:
-      "This simulation focused on quantitative research  and machine learning methods to analyse a book of loans and estimate a customer's probability of default. I also used dynamic programming to convert FICO scores into categorical data to predict defaults. I have included the code I produced as well as the documentation of the steps I took.",
-    tags: [
-      {
-        name: "Quantitative Research",
-        color: "blue-text-gradient",
-      },
-      {
-        name: "Machine Learning",
-        color: "green-text-gradient",
-      },
-      {
-        name: "Default Prediction",
-        color: "pink-text-gradient",
-      },
-    ],
-    image: jpmorgan,
-    source_code_link: "https://github.com/joelb1401/JPMquantsim",
-  },
-  {
-    name: "AmplifyME M&A Finance Accelerator Simulation",
-    description:
-      "Before knowing much about investment banking or M&A, I completed this simulation and achieved a 96% score. It required successful completion of an entire DCF analysis with a recommendation in under 45 minutes.",
-    tags: [
-      {
-        name: "M&A",
-        color: "blue-text-gradient",
-      },
-      {
-        name: "DCF Analysis",
-        color: "green-text-gradient",
-      },
-      {
-        name: "Financial Statements",
-        color: "pink-text-gradient",
-      },
-    ],
-    image: amplify,
-    source_code_link: "https://github.com/joelb1401/AMdcf",
-  },
-  {
-    name: "JP Morgan Chase Investment Banking Job Simulation - Forage",
-    description:
-      "This simulation introduced me to DCF analysis, target company research and identification, and the auction process. After completing the DCF model, I crafted a concise 2-pager to inform a client's decision-making.",
-    tags: [
-      {
-        name: "M&A",
-        color: "blue-text-gradient",
-      },
-      {
-        name: "DCF Analysis",
-        color: "green-text-gradient",
-      },
-      {
-        name: "Due Diligence",
-        color: "pink-text-gradient",
-      },
-    ],
-    image: jpmorgan,
-    source_code_link: "https://github.com/joelb1401/JPMibsim",
-  },
-  {
-    name: "MacroVoices Podcast",
-    description:
-      "To keep up-to-date on the current relevant macroeconomic events and learn about how they affect the markets, I listen to the weekly podcast by Erik Townsend and Patrick Ceresna.",
-    tags: [
-      {
-        name: "Macroeconomics",
-        color: "blue-text-gradient",
-      },
-      {
-        name: "Investment",
-        color: "green-text-gradient",
-      },
-      {
-        name: "Politics",
-        color: "pink-text-gradient",
-      },
-    ],
-    image: macro,
-    source_code_link: "https://www.macrovoices.com/",
-  },
-];
-
-export { services, technologies, experiences, education, projects, other_experience };
+export { experiences, education, projects };
