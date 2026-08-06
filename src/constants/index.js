@@ -9,11 +9,11 @@ import {
   springfield,
 } from "../assets";
 
-import bscProject from "../assets/research/Percolation, Random Walks, and Minimal Cutsets on Infinite Graphs - Joel Bassil (BSc Project)_compressed.pdf";
-import bscPresentation from "../assets/research/Presentation.pdf";
+import bscProject from "../assets/research/bsc-project-report.pdf";
+import bscPresentation from "../assets/research/bsc-project-presentation.pdf";
 import bscCover from "../assets/research/project-cover.png";
-import sambaReport from "../assets/research/Compressed report.pdf";
-import sambaPresentation from "../assets/research/summer Presentation.pdf";
+import sambaReport from "../assets/research/samba-report.pdf";
+import sambaPresentation from "../assets/research/samba-presentation.pdf";
 import sambaCover from "../assets/research/samba-cover.png";
 
 export const navLinks = [
