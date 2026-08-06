@@ -102,7 +102,7 @@ function Game() {
   }, [runAfterDelay, resetGame]);
 
   const handleViewPortfolio = () => {
-    navigate('/Portfolio/portfolio');
+    navigate('/portfolio');
     window.scrollTo(0, 0);
   };
 

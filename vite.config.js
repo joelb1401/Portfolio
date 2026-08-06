@@ -1,20 +1,8 @@
 import { defineConfig } from 'vite'
 import react from '@vitejs/plugin-react'
-import fs from 'fs'
-import path from 'path'
 
+// Served from the root on Vercel, so no base path and no 404.html shim —
+// unknown paths are rewritten to index.html by vercel.json instead.
 export default defineConfig({
-  plugins: [
-    react(),
-    {
-      name: 'copy-404',
-      writeBundle() {
-        fs.copyFileSync(
-          path.resolve(__dirname, 'public/404.html'),
-          path.resolve(__dirname, 'dist/404.html')
-        )
-      }
-    }
-  ],
-  base: '/Portfolio/',
+  plugins: [react()],
 })
