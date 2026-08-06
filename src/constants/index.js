@@ -7,6 +7,7 @@ import {
   pwc,
   college,
   springfield,
+  commonwealth,
 } from "../assets";
 
 import bscProject from "../assets/research/bsc-project-report.pdf";
@@ -339,7 +340,7 @@ const powerlifting = [
     competition: "Commonwealth Championships 2026",
     result: "Upcoming — competing for England",
     date: "September 2026",
-    flag: "commonwealth",
+    icon: commonwealth,
   },
   {
     competition: "English Junior Championships 2026",

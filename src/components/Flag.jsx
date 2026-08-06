@@ -8,12 +8,12 @@ export const drawnFlags = new Set(["uk", "england"]);
  * it stays sharp at any size and costs nothing to load. An unknown flag
  * renders nothing, leaving the margin empty rather than broken.
  */
-const Flag = ({ of, title }) => {
+const Flag = ({ of, title, className = "entry__flag" }) => {
   const id = useId().replace(/:/g, "");
 
   if (of === "uk") {
     return (
-      <svg className="flag" viewBox="0 0 60 30" role="img" aria-label={title}>
+      <svg className={className} viewBox="0 0 60 30" role="img" aria-label={title}>
         <clipPath id={`${id}-frame`}>
           <path d="M0,0 v30 h60 v-30 z" />
         </clipPath>
@@ -39,7 +39,7 @@ const Flag = ({ of, title }) => {
 
   if (of === "england") {
     return (
-      <svg className="flag" viewBox="0 0 60 36" role="img" aria-label={title}>
+      <svg className={className} viewBox="0 0 60 36" role="img" aria-label={title}>
         <rect width="60" height="36" fill="#fff" />
         <path d="M30,0 v36 M0,18 h60" stroke="#ce1124" strokeWidth="7.2" />
       </svg>

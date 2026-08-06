@@ -8,6 +8,7 @@ import pwc from "./company/pwc.png";
 import college from "./company/college.png";
 import springfield from "./company/springfield.png";
 
+import commonwealth from "./commonwealth.png";
 import mna from "./mna.png";
 import fxalgo from "./fxalgo.png";
 import option from "./option.png";
@@ -24,6 +25,7 @@ export {
   pwc,
   college,
   springfield,
+  commonwealth,
   mna,
   fxalgo,
   option,

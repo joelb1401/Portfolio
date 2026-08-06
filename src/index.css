@@ -654,16 +654,15 @@ body {
   border-bottom-color: var(--ink);
 }
 
-/* A flag is a plate in its own right, so it keeps the hairline frame but
-   not the white padding a screenshot would need. */
-.entry__figure--flag {
-  line-height: 0;
-}
-
-.flag {
+/* Flags sit at the same size as the company logos beside them. The
+   hairline is what stops the England flag reading as a loose red cross
+   on the white page. */
+.entry__flag {
   display: block;
-  width: 100%;
+  width: 2.25rem;
   height: auto;
+  margin-bottom: 0.55rem;
+  border: 1px solid var(--hairline);
 }
 
 /* An entry title that points at a fuller account elsewhere. */

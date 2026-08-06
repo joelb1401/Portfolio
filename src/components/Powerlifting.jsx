@@ -14,10 +14,18 @@ const Powerlifting = () => (
         delay={Math.min(index, 3) * 60}
       >
         <div className="entry__aside">
-          {drawnFlags.has(meet.flag) && (
-            <figure className="entry__figure entry__figure--flag">
+          {meet.icon ? (
+            <img
+              className="entry__logo"
+              src={meet.icon}
+              alt=""
+              loading="lazy"
+              decoding="async"
+            />
+          ) : (
+            drawnFlags.has(meet.flag) && (
               <Flag of={meet.flag} title={meet.competition} />
-            </figure>
+            )
           )}
           <span className="entry__date">{meet.date}</span>
         </div>
