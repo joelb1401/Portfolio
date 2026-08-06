@@ -9,6 +9,7 @@ import Arbor from "./components/Arbor.jsx";
 import BackToTop from "./components/BackToTop.jsx";
 import Education from "./components/Education.jsx";
 import Experience from "./components/Experience.jsx";
+import Powerlifting from "./components/Powerlifting.jsx";
 import Works from "./components/Works.jsx";
 
 const Portfolio = () => {
@@ -32,6 +33,7 @@ const Portfolio = () => {
         <Education />
         <Works />
         <Experience />
+        <Powerlifting />
 
         <BackToTop />
       </main>

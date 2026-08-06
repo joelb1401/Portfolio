@@ -18,6 +18,7 @@ const Education = () => (
     {education.map((item, index) => (
       <Reveal
         key={`${item.school}-${item.course ?? item.date}`}
+        id={item.id}
         className="entry row"
         delay={Math.min(index, 3) * 60}
       >

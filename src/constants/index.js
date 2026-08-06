@@ -42,6 +42,11 @@ export const navLinks = [
     title: "Work Experience",
     number: "3",
   },
+  {
+    id: "powerlifting",
+    title: "Powerlifting",
+    number: "4",
+  },
 ];
 
 export const sectionNumber = (id) =>
@@ -161,6 +166,7 @@ const education = [
   },
   {
     school: "University of Bath",
+    id: "bsc-degree",
     type: "university",
     course: "BSc (hons) Mathematics",
     grades: "87% degree average (First-class)",
@@ -327,4 +333,26 @@ const projects = [
   },
 ];
 
-export { experiences, education, projects };
+/** Flags are drawn by Flag.jsx; `flag` names which standard to draw. */
+const powerlifting = [
+  {
+    competition: "Commonwealth Championships 2026",
+    result: "Upcoming — competing for England",
+    date: "September 2026",
+    flag: "commonwealth",
+  },
+  {
+    competition: "English Junior Championships 2026",
+    result: "2nd place",
+    date: "May 2026",
+    flag: "england",
+  },
+  {
+    competition: "British University Championships (BUCs) 2026",
+    result: "3rd place",
+    date: "April 2026",
+    flag: "uk",
+  },
+];
+
+export { experiences, education, projects, powerlifting };
